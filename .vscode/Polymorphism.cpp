@@ -1,28 +1,4 @@
-#include<iostream>
-using namespace std;
-
-class Calculator
-{
-    protected:
-     int a,b;
-
-    public:
-        Calculator(int x,int y)
-        {
-            a=-x;
-            b=y;
-        }
-        void operate()
-        {
-            cout<<"Base Add:"<<a+b<<endl;
-        }
-        void operate(int x)
-        {
-            cout<<"Square:"<<x*x<<endl;
-        }
-}
-
-///#include <iostream>
+#include <iostream>
 using namespace std;
 
 class Calculator {
@@ -51,6 +27,7 @@ private:
     int c;
 
 public:
+    Calculator::operate;
     // parameterized constructor
     AdvancedCalculator(int x, int y, int z) : Calculator(x, y) {
         c = z;
@@ -85,7 +62,7 @@ int main() {
     cout << "\n--- Derived Class Calls ---" << endl;
     c2.operate();         // derived version (hides base)
     c2.operate(3, 4);     // derived overloaded (power)
-    c2.operate(7);        // calls BASE VERSION because it is not hidden
+   c2.operate(7);        // calls BASE VERSION because it is not hidden
 
     cout << "\n--- Using Base Pointer (NO virtual) ---" << endl;
     Calculator* p = &c2;
