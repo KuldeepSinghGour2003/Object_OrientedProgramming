@@ -34,25 +34,28 @@ class Sports{
 
 class Result : public Academic_Marks ,public Sports
 {
+
  public:
   int total_marks;
   float avg_marks;
   void display()
   {
+
     cout<<" ________ RESULT_______\n";
     Academic_Marks::getmarks();
     Sports::getsports();
     cout<<"The total marks of student:"<<endl;
     total_marks=math_marks+phy_marks+chem_marks+spmarks;
     avg_marks=total_marks/4.0;
-    cout << "Math: " << marks_math << endl;
-    cout << "Physics: " << marks_phy << endl;
-    cout << "Chemistry: " << marks_chem << endl;
+    cout << "Math: " << math_marks << endl;
+    cout << "Physics: " << phy_marks << endl;
+    cout << "Chemistry: " << chem_marks << endl;
     cout << "Sports: " << spmarks << endl;
     cout<<"Total marks:"<<total_marks<<endl;
     cout<<"Average marks:"<<avg_marks<<endl;
-
   }
+
+  
 };
 int main()
 {

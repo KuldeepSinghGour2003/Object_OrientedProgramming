@@ -3,7 +3,7 @@ using namespace std;
 
 class Shape {
 private:
-    string color;   // private data
+    string color;   
 
 public:
     Shape(string c) {
@@ -14,7 +14,7 @@ public:
         return color;
     }
 
-    // Pure virtual function
+    
     virtual float area() = 0;
 };
 
@@ -23,7 +23,7 @@ private:
     float radius;
 
 public:
-    Circle(string c, float r) : Shape(c) //This is type to access base class constructor
+    Circle(string c, float r) : Shape(c) 
     {
         radius = r;
     }
